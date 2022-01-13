@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <!-- <script src="../jquery.js"></script> -->
+    <!-- <script src="../bootstrap/js/bootstrap.js"></script> -->
+    <title>Cart Items</title>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+        #divone {
+            background-image: linear-gradient(lightskyblue, lightgrey);
+        }
+        #button1{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid border border-info mt-5 w-50" id="divone">
+        <div class="row header-nav">
+            <div class="col pl-5">
+                <h1 class=" mt-1">Items in cart</h1>
+                
+            </div>
+            <div class="col mt-3 text-lg-right text-sm-center">
+                <a class="btn" href="miniproject.html" id="button1">Shop</a>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                </tr>
+                <tbody id="wrap">
+                    <h5 class="text-center" id="default"></h5>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <p id="total"></p>
+        </div>
+    </div>
+    </div>
+    <script>
+        function show(){
+            if(localStorage.getItem("products_cart")){
+                let productGet=localStorage.getItem("products_cart");
+                let productBack=JSON.parse(productGet);
+                let s="";
+                let totalPrice = 0;                
+                for(let i=0;i<productBack.length;i++){
+                        s+=`<tr><td>${productBack[i].name}</td> <td>${productBack[i].price}</td> </tr>`;
+                        let p=Number(productBack[i].price);
+                        totalPrice += p;
+                }
+                document.querySelector("#wrap").innerHTML=s;
+                document.querySelector("#total").textContent= `Total Price : ${totalPrice}`;
+                
+            }
+            else{
+                document.querySelector("#default").textContent="NO ITEMS IN THE CART";
+            }
+        }
+        show();
+    </script>
+</body>
+</html>

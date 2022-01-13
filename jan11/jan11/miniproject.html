@@ -32,10 +32,28 @@
         #cards{
             background: white;
         }
+        #btn{
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1 class="text-center mt-1">Ecommerce</h1>
+    <div class="row header-nav">
+        <div class="col pl-5">
+            <h1 class=" mt-1">Ecommerce</h1>
+            
+        </div>
+        <div class="col mt-3 text-lg-right text-sm-center">
+            <a class="btn" href="miniproject.html" id="btn">Home</a>
+            <a class="p-3 mr-2" href="cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg> 
+            </a> 
+        </div>
+    </div>
+    
     <div class="container-fluid border border-info mt-3" id="divone">
         <div class="card-deck" id="cards">
             <tr>
@@ -49,7 +67,7 @@
                             <figcaption id="productprice1">129</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row11()" id="button1">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button1','productname1','productprice1')" id="button1">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -60,10 +78,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname2">Apple Mac</figcaption>
-                            <figcaption id="productprice2">1,22,900</figcaption><br>
+                            <figcaption id="productprice2">122900</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row12()" id="button2">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button2','productname2','productprice2')" id="button2">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -74,10 +92,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname3">Levis Shirt</figcaption>
-                            <figcaption id="productprice3">1,799</figcaption><br>
+                            <figcaption id="productprice3">1799</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row13()" id="button3">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button3','productname3','productprice3')" id="button3">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -88,10 +106,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname4">Karcher Vacuum</figcaption>
-                            <figcaption id="productprice4">7,299</figcaption><br>
+                            <figcaption id="productprice4">7299</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row14()" id="button4">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button4','productname4','productprice4')" id="button4">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -104,10 +122,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname5">Levis Jeans</figcaption>
-                            <figcaption id="productprice5">1,499</figcaption><br>
+                            <figcaption id="productprice5">1499</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row21()" id="button5">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button5','productname5','productprice5')" id="button5">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -118,10 +136,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname6">Xiamoi 11 Ultra</figcaption>
-                            <figcaption id="productprice6">69,999</figcaption><br>
+                            <figcaption id="productprice6">69999</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row22()" id="button6">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button6','productname6','productprice6')" id="button6">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -135,7 +153,7 @@
                             <figcaption id="productprice7">999</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row23()" id="button7">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button7','productname7','productprice7')" id="button7">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -146,10 +164,10 @@
                         </div>
                         <div class="text-center">
                             <figcaption id="productname8">Skybags Bag</figcaption>
-                            <figcaption id="productprice8">1,999</figcaption><br>
+                            <figcaption id="productprice8">1999</figcaption><br>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-primary" onclick="row24()" id="button8">Add to cart</button>
+                            <button class="btn btn-outline-primary" onclick="add('button8','productname8','productprice8')" id="button8">Add to cart</button>
                         </div>
                     </figure>
                 </article>
@@ -164,101 +182,41 @@
     </div>
         <script>
             let products_cart = [];
-            function row11(){
-                buttonOne = document.getElementById("button1");
-                buttonOne.textContent = "Remove from cart";
-                let productNameOne = document.getElementById("productname1");
-                let productPriceOne = document.getElementById("productprice1");
-                let productOne = {
-                    name: productNameOne.textContent,
-                    price: productPriceOne.textContent
+            let array = [];
+            function add(b,n,p){
+                let btnName = document.getElementById(b);
+                let prodName = document.getElementById(n);
+                let prodPrice = document.getElementById(p);
+                if(btnName.textContent === "Add to cart"){
+                    btnName.textContent = "Remove from cart";
+                    let products = {
+                        name: prodName.textContent,
+                        price: prodPrice.textContent
+                    }
+                    if(localStorage.getItem("products_cart")){
+                        array = JSON.parse(localStorage.getItem("products_cart"));
+                        array.push(products);
+                        localStorage.setItem("products_cart",JSON.stringify(array));
+                    }
+                    else{
+                        array.push(products);
+                        localStorage.setItem("products_cart",JSON.stringify(array));
+                    }
                 }
-                products_cart.push(productOne);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row12(){
-                buttonTwo = document.getElementById("button2");
-                buttonTwo.textContent = "Remove from cart";
-                let productNameTwo = document.getElementById("productname2");
-                let productPriceTwo = document.getElementById("productprice2");
-                let productTwo = {
-                    name: productNameTwo.textContent,
-                    price: productPriceTwo.textContent
+                else{
+                    btnName.textContent = "Add to cart";
+                    let productBack = JSON.parse(localStorage.getItem("products_cart"));
+                    let array = [];
+                    for(let i=0;i<productBack.length;i++){
+                        if(productBack[i].name === prodName.textContent){
+                            continue;
+                        }
+                        else{
+                            array.push(productBack[i]);
+                        }
+                        localStorage.setItem("products_cart",JSON.stringify(array));
+                    }
                 }
-                products_cart.push(productTwo);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row13(){
-                buttonThree = document.getElementById("button3");
-                buttonThree.textContent = "Remove from cart";
-                let productNameThree = document.getElementById("productname3");
-                let productPriceThree = document.getElementById("productprice3");
-                let productThree = {
-                    name: productNameThree.textContent,
-                    price: productPriceThree.textContent
-                }
-                products_cart.push(productThree);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row14(){
-                buttonFour = document.getElementById("button4");
-                buttonFour.textContent = "Remove from cart";
-                let productNameFour = document.getElementById("productname4");
-                let productPriceFour = document.getElementById("productprice4");
-                let productFour = {
-                    name: productNameFour.textContent,
-                    price: productPriceFour.textContent
-                }
-                products_cart.push(productFour);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row21(){
-                buttonFive = document.getElementById("button5");
-                buttonFive.textContent = "Remove from cart";
-                let productNameFive = document.getElementById("productname5");
-                let productPriceFive = document.getElementById("productprice5");
-                let productFive = {
-                    name: productNameFive.textContent,
-                    price: productPriceFive.textContent
-                }
-                products_cart.push(productFive);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row22(){
-                buttonSix = document.getElementById("button6");
-                buttonSix.textContent = "Remove from cart";
-                let productNameSix = document.getElementById("productname6");
-                let productPriceSix = document.getElementById("productprice6");
-                let productSix = {
-                    name: productNameSix.textContent,
-                    price: productPriceSix.textContent
-                }
-                products_cart.push(productSix);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row23(){
-                buttonSeven = document.getElementById("button7");
-                buttonSeven.textContent = "Remove from cart";
-                let productNameSeven = document.getElementById("productname7");
-                let productPriceSeven = document.getElementById("productprice7");
-                let productSeven = {
-                    name: productNameSeven.textContent,
-                    price: productPriceSeven.textContent
-                }
-                products_cart.push(productSeven);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
-            }
-            function row24(){
-                buttonEight = document.getElementById("button8");
-                buttonEight.textContent = "Remove from cart";
-                let productNameEight = document.getElementById("productname8");
-                let productPriceEight = document.getElementById("productprice8");
-                let productEight = {
-                    name: productNameEight.textContent,
-                    price: productPriceEight.textContent
-                }
-                products_cart.push(productEight);
-                localStorage.setItem("products_cart",JSON.stringify(products_cart));
             }
             function clearAll(){
                 localStorage.clear();
